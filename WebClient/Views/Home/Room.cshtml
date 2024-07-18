@@ -1,0 +1,18 @@
+﻿@using Client.Models
+@model List<RoomModel> 
+@{
+    ViewData["Title"] = "Room";
+}
+<h1>Room</h1>
+<table class="table table-striped">
+    @foreach (var room in Model)
+    {
+        <tr>
+            <td>@room.RoomPrize</td>
+            <td>@room.MaxOccupancy</td>
+            <td>@room.RoomType</td>
+            <td>@room.Description</td>
+            <td>@room.RoomName</td>
+        </tr>
+    }
+</table>
